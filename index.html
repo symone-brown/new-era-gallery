@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Era Art Gallery - Contemporary Art in SoHo NYC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        galleryYellow: '#d19100',
+                        galleryYellowHover: '#b87d00'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom CSS for New Era Art Gallery */
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        /* Button styles */
+        .btn-gallery {
+            background-color: #d19100 !important;
+            color: #ffffff !important;
+            border: none !important;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+        }
+        .btn-gallery:hover {
+            background-color: #b87d00 !important;
+            color: #ffffff !important;
+        }
+
+        .btn-gallery-outline {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            border: none !important;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+        }
+        .btn-gallery-outline:hover {
+            background-color: #e5e5e5 !important;
+            color: #000000 !important;
+        }
+
+        .btn-gallery-rounded {
+            background-color: #d19100 !important;
+            color: #ffffff !important;
+            border: none !important;
+            border-radius: 9999px !important;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+        }
+        .btn-gallery-rounded:hover {
+            background-color: #b87d00 !important;
+            color: #ffffff !important;
+        }
+
+        /* Hero banner responsive styles */
+        .hero-banner {
+            width: 100%;
+            height: auto !important;
+            min-height: 0 !important;
+            aspect-ratio: 4 / 5 !important;
+            position: relative;
+        }
+
+        .hero-banner img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            display: block;
+        }
+
+        @media (min-width: 768px) {
+            .hero-banner {
+                aspect-ratio: auto !important;
+                height: 100vh !important;
+                min-height: 600px !important;
+            }
+        }
+
+        /* Mobile menu animation */
+        .mobile-menu {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        .mobile-menu.open {
+            max-height: 200px;
+            opacity: 1;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .tracking-wider {
+            letter-spacing: 0.05em;
+        }
+
+        .tracking-wide {
+            letter-spacing: 0.025em;
+        }
+
+        /* Hover effects */
+        .group:hover .group-hover\:scale-105 {
+            transform: scale(1.05);
+        }
+
+        .group:hover .group-hover\:bg-black\/20 {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .transition-transform {
+            transition: transform 0.3s ease;
+        }
+
+        .transition-colors {
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-black">
+    <!-- Header -->
+    <header class="bg-black text-white border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="file:///Users/symonebrown/Desktop/School/Advanced%20Web%20Dev/website_prototype_symone%20brown/new%20era%20logo.png" alt="New Era Art Gallery Logo" class="h-12">
+                </div>
+
+                <!-- Right side container for navigation and icons -->
+                <div class="flex items-center space-x-6">
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden md:flex items-center space-x-6">
+                        <a href="#gallery" class="uppercase tracking-wider hover:text-gray-300 transition-colors">GALLERY</a>
+                        <a href="#events" class="uppercase tracking-wider hover:text-gray-300 transition-colors">EVENTS</a>
+                        <a href="#coffee" class="uppercase tracking-wider hover:text-gray-300 transition-colors">COFFEE SHOP</a>
+                    </nav>
+
+                    <!-- Utility Icons -->
+                    <div class="flex items-center space-x-2">
+                        <button class="text-white hover:text-gray-300 hover:bg-gray-800 p-2 rounded-md transition-colors">
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 2.5M7 13h5m-5 0l2.5 2.5M17 21a2 2 0 100-4 2 2 0 000 4zM9 21a2 2 0 100-4 2 2 0 000 4z"></path>
+                            </svg>
+                        </button>
+                        
+                        <!-- Mobile Menu Button -->
+                        <button id="mobile-menu-btn" class="md:hidden text-white hover:text-gray-300 hover:bg-gray-800 p-2 rounded-md transition-colors">
+                            <svg id="menu-icon" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                            <svg id="close-icon" class="h-5 w-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="md:hidden mobile-menu">
+                <div class="pt-4 pb-2 space-y-4">
+                    <a href="#gallery" class="block uppercase tracking-wider hover:text-gray-300 transition-colors py-2 border-b border-gray-700">GALLERY</a>
+                    <a href="#events" class="block uppercase tracking-wider hover:text-gray-300 transition-colors py-2 border-b border-gray-700">EVENTS</a>
+                    <a href="#coffee" class="block uppercase tracking-wider hover:text-gray-300 transition-colors py-2">COFFEE SHOP</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen min-h-[600px] bg-black text-white overflow-hidden hero-banner">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1723974591057-ccadada1f283?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb250ZW1wb3JhcnklMjBhcnQlMjBnYWxsZXJ5JTIwZXhoaWJpdGlvbnxlbnwxfHx8fDE3NTY2MDA5NjF8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Current Exhibition" class="w-full h-full object-cover">
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        </div>
+
+        <!-- Content Overlay -->
+        <div class="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center">
+            <div class="max-w-4xl">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl uppercase tracking-wider mb-6">
+                    CONTEMPORARY<br>
+                    EXPRESSIONS
+                </h1>
+                <p class="text-xl md:text-2xl uppercase tracking-wide mb-8 text-gray-200">
+                    FEATURING EMERGING ARTISTS FROM NYC
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="btn-gallery-rounded px-8 py-4 text-lg">
+                        BUY TICKETS
+                    </button>
+                    <button class="btn-gallery-rounded px-8 py-4 text-lg">
+                        PLAN YOUR VISIT
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's On Today -->
+    <section class="bg-black text-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl uppercase tracking-wider mb-12 text-center">
+                WHAT'S ON TODAY
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Current Exhibit -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1533158388470-9a56699990c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGFydCUyMHBhaW50aW5nfGVufDF8fHx8MTc1NjU2NjA3OHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Current Exhibit" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition-colors duration-300"></div>
+                    </div>
+                    
+                    <div class="space-y-3 text-center">
+                        <h3 class="text-xl uppercase tracking-wider">CURRENT EXHIBIT</h3>
+                        <p class="text-gray-400 uppercase tracking-wide text-sm">Contemporary Expressions</p>
+                        <button class="btn-gallery-outline w-full py-3 text-sm">VIEW WORKS</button>
+                    </div>
+                </div>
+
+                <!-- Upcoming Event -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnQlMjBnYWxsZXJ5JTIwdmlzaXRvcnxlbnwxfHx8fDE3NTY2MDA5NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Upcoming Event" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition-colors duration-300"></div>
+                    </div>
+                    
+                    <div class="space-y-3 text-center">
+                        <h3 class="text-xl uppercase tracking-wider">UPCOMING EVENT</h3>
+                        <p class="text-gray-400 uppercase tracking-wide text-sm">Artist Talk: Modern Perspectives</p>
+                        <button class="btn-gallery-outline w-full py-3 text-sm">REGISTER</button>
+                    </div>
+                </div>
+
+                <!-- Coffee Shop Special -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-4">
+                        <img src="https://images.pexels.com/photos/907142/pexels-photo-907142.jpeg" alt="Coffee Shop Special" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition-colors duration-300"></div>
+                    </div>
+                    
+                    <div class="space-y-3 text-center">
+                        <h3 class="text-xl uppercase tracking-wider">COFFEE SHOP SPECIAL</h3>
+                        <p class="text-gray-400 uppercase tracking-wide text-sm">Artisan Roast & Pastries</p>
+                        <button class="btn-gallery-outline w-full py-3 text-sm">ORDER NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Highlights -->
+    <section class="bg-black text-white py-16">
+        <div class="container mx-auto px-4">
+            <!-- Artist of the Month -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+                <div>
+                    <img src="https://images.pexels.com/photos/3778328/pexels-photo-3778328.jpeg" alt="Artist of the Month - Modern Abstract Sculpture in Gallery" class="w-full h-96 object-cover">
+                </div>
+                <div class="flex flex-col justify-center space-y-6">
+                    <h2 class="text-4xl md:text-5xl uppercase tracking-wider">
+                        ARTIST OF<br>THE MONTH
+                    </h2>
+                    <div class="space-y-4">
+                        <h3 class="text-2xl uppercase tracking-wide">MARIA SANTOS</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Maria Santos explores the intersection of technology and human emotion through her bold sculptural works. 
+                            Her latest series "Digital Dreams" challenges our perception of reality in the modern age.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed">
+                            Based in Brooklyn, Santos has exhibited internationally and her work is part of several permanent collections.
+                        </p>
+                    </div>
+                    <button class="btn-gallery-outline uppercase tracking-wider w-fit px-8 py-3">
+                        SEE WORKS
+                    </button>
+                </div>
+            </div>
+
+            <!-- From the Shop & Café Vibes -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- From the Shop -->
+                <div class="space-y-6">
+                    <h2 class="text-3xl md:text-4xl uppercase tracking-wider">
+                        FROM THE SHOP
+                    </h2>
+                    <div class="relative group">
+                        <img src="https://images.unsplash.com/photo-1533158388470-9a56699990c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGFydCUyMHBhaW50aW5nfGVufDF8fHx8MTc1NjU2NjA3OHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Limited Edition Print" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition-colors duration-300"></div>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl uppercase tracking-wide">LIMITED EDITION PRINTS</h3>
+                        <p class="text-gray-400">
+                            Exclusive prints from our featured artists, available in limited quantities. 
+                            Each piece comes with a certificate of authenticity.
+                        </p>
+                        <button class="btn-gallery-outline uppercase tracking-wide py-3 px-6">
+                            SHOP NOW
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Café Vibes -->
+                <div class="space-y-6">
+                    <h2 class="text-3xl md:text-4xl uppercase tracking-wider">
+                        CAFÉ VIBES
+                    </h2>
+                    <div class="relative group">
+                        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBzaG9wJTIwaW50ZXJpb3J8ZW58MXx8fHwxNzU2NTM3Nzc3fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Café Interior" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition-colors duration-300"></div>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl uppercase tracking-wide">CREATIVE CO-WORKING</h3>
+                        <p class="text-gray-400">
+                            Our café offers the perfect blend of artisan coffee and creative atmosphere. 
+                            Free WiFi, comfortable seating, and inspiring art make it ideal for remote work.
+                        </p>
+                        <button class="btn-gallery-outline uppercase tracking-wide py-3 px-6">
+                            VIEW MENU
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="bg-black text-white py-20 relative overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1639999472003-dc2320ce5708?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZXclMjB5b3JrJTIwY2l0eSUyMHNvaG8lMjBzdHJlZXQlMjBhcnQlMjBnYWxsZXJ5fGVufDF8fHx8MTc1NjYwMjI0OXww&ixlib=rb-4.1.0&q=80&w=1080" alt="New York SoHo Street Scene" class="w-full h-full object-cover">
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl uppercase tracking-wider mb-8">
+                EXPERIENCE ART.<br>
+                STAY FOR<br>
+                COMMUNITY.
+            </h2>
+            
+            <button class="btn-gallery-rounded uppercase tracking-wider px-12 py-6 text-xl">
+                BUY TICKETS
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white border-t border-gray-800">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Hours of Operation -->
+                <div class="space-y-4">
+                    <h3 class="text-xl uppercase tracking-wider">HOURS</h3>
+                    <div class="space-y-2 text-gray-400">
+                        <div class="flex justify-between items-center">
+                            <span>MON - WED</span>
+                            <span class="ml-4">10AM - 7PM</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>THU - FRI</span>
+                            <span class="ml-4">10AM - 9PM</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>SAT - SUN</span>
+                            <span class="ml-4">9AM - 8PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="space-y-4">
+                    <h3 class="text-xl uppercase tracking-wider">LOCATION</h3>
+                    <div class="space-y-3 text-gray-400">
+                        <div class="flex items-start space-x-3">
+                            <svg class="h-5 w-5 mt-0.5 flex-shrink-0 text-galleryYellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <div class="space-y-1">
+                                <p class="text-white">123 Spring Street</p>
+                                <p>SoHo, New York, NY 10012</p>
+                                <p class="text-sm">United States</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-4">
+                    <h3 class="text-xl uppercase tracking-wider">CONTACT</h3>
+                    <div class="space-y-3 text-gray-400">
+                        <div class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-galleryYellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span>(212) 555-0123</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-galleryYellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 7.89a2 2 0 002.83 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span>info@neweraart.nyc</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="space-y-4">
+                    <h3 class="text-xl uppercase tracking-wider">FOLLOW US</h3>
+                    <div class="flex space-x-4">
+                        <button class="text-gray-400 hover:text-galleryYellow hover:bg-gray-800 p-2 rounded-md transition-colors">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.024-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.083.402-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.743-1.378l-.742 2.852c-.269 1.036-1.007 2.301-1.497 3.085C9.68 23.793 10.822 24.001 12.017 24.001c6.624-.001 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+                            </svg>
+                        </button>
+                        <button class="text-gray-400 hover:text-galleryYellow hover:bg-gray-800 p-2 rounded-md transition-colors">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </button>
+                        <button class="text-gray-400 hover:text-galleryYellow hover:bg-gray-800 p-2 rounded-md transition-colors">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center">
+                <div class="text-gray-400 text-sm">
+                    <p>&copy; 2024 New Era Art Gallery. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('open');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on navigation links
+        const mobileNavLinks = mobileMenu.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('open');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
