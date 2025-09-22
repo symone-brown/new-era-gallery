@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<header class="bg-black text-white border-b border-gray-800">
-  <div class="container mx-auto px-4 py-4">
-    <div class="flex items-center justify-between">
-      <!-- Logo → Home -->
-      <a href="index.html" class="flex-shrink-0">
-        <img src="new-era-logo.png" alt="New Era Art Gallery Logo" class="h-12">
-      </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Era Art Gallery - Contemporary Art in SoHo NYC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-      <!-- Right side -->
-      <div class="flex items-center space-x-6">
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center space-x-6">
-          <a href="about.html"        class="uppercase tracking-wider hover:text-gray-300 transition-colors">ABOUT</a>
-          <a href="gallery.html"      class="uppercase tracking-wider hover:text-gray-300 transition-colors">GALLERY</a>
-          <a href="events.html"       class="uppercase tracking-wider hover:text-gray-300 transition-colors">EVENTS</a>
-          <a href="coffee-shop.html"  class="uppercase tracking-wider hover:text-gray-300 transition-colors">COFFEE SHOP</a>
-        </nav>
+<body class="min-h-screen bg-black">
+  <!-- SINGLE HEADER (keep this one; delete the other) -->
+  <header class="bg-black text-white border-b border-gray-800">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Logo → Home -->
+        <a href="index.html" class="flex-shrink-0">
+          <img src="new-era-logo.png" alt="New Era Art Gallery Logo" class="h-12">
+        </a>
 
-        <!-- Icons + Mobile menu button -->
-        <div class="flex items-center space-x-2">
-          <button class="text-white hover:text-gray-300 hover:bg-gray-800 p-2 rounded-md transition-colors">
-            <!-- (cart icon unchanged) -->
-            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 2.5M7 13h5m-5 0l2.5 2.5M17 21a2 2 0 100-4 2 2 0 000 4zM9 21a2 2 0 100-4 2 2 0 000 4z"></path>
-            </svg>
-          </button>
+        <!-- Right side -->
+        <div class="flex items-center space-x-6">
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex items-center space-x-6">
+            <a href="about.html"        class="uppercase tracking-wider hover:text-gray-300 transition-colors">ABOUT</a>
+            <a href="gallery.html"      class="uppercase tracking-wider hover:text-gray-300 transition-colors">GALLERY</a>
+            <a href="events.html"       class="uppercase tracking-wider hover:text-gray-300 transition-colors">EVENTS</a>
+            <a href="coffee-shop.html"  class="uppercase tracking-wider hover:text-gray-300 transition-colors">COFFEE SHOP</a>
+          </nav>
 
           <!-- Mobile Menu Button -->
           <button id="mobile-menu-btn" class="md:hidden text-white hover:text-gray-300 hover:bg-gray-800 p-2 rounded-md transition-colors">
@@ -38,19 +38,18 @@
           </button>
         </div>
       </div>
-    </div>
 
-    <!-- Mobile Navigation -->
-    <nav id="mobile-menu" class="md:hidden mobile-menu">
-      <div class="pt-4 pb-2 space-y-4">
-        <a href="about.html"        class="block uppercase tracking-wider hover:text-gray-300 transition-colors py-2 border-b border-gray-700">ABOUT</a>
-        <a href="gallery.html"      class="block uppercase tracking-wider hover:text-gray-300 transition-colors py-2 border-b border-gray-700">GALLERY</a>
-        <a href="events.html"       class="block uppercase tracking-wider hover:text-gray-300 transition-colors py-2 border-b border-gray-700">EVENTS</a>
-        <a href="coffee-shop.html"  class="block uppercase tracking-wider hover:text-gray-300 transition-colors py-2">COFFEE SHOP</a>
-      </div>
-    </nav>
-  </div>
-</header>
+      <!-- Mobile Navigation -->
+      <nav id="mobile-menu" class="md:hidden mobile-menu">
+        <div class="pt-4 pb-2 space-y-4">
+          <a href="about.html"        class="block uppercase tracking-wider hover:text-gray-300 transition-colors py-2 border-b border-gray-700">ABOUT</a>
+          <a href="gallery.html"      class="block uppercase tracking-wider hover:text-gray-300 transition-colors py-2 border-b border-gray-700">GALLERY</a>
+          <a href="events.html"       class="block uppercase tracking-wider hover:text-gray-300 transition-colors py-2 border-b border-gray-700">EVENTS</a>
+          <a href="coffee-shop.html"  class="block uppercase tracking-wider hover:text-gray-300 transition-colors py-2">COFFEE SHOP</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
 <body class="min-h-screen bg-black">
     <!-- Header -->
