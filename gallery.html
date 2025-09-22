@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Era Art Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <img src="https://via.placeholder.com/150x48/FFFFFF/000000?text=NEW+ERA" alt="New Era Art Gallery Logo" class="logo-img">
+                </a>
+
+                <!-- Desktop Navigation and Cart -->
+                <div class="nav-container">
+                    <!-- Desktop nav -->
+                    <nav class="desktop-nav">
+                        <a href="#" class="nav-link">About</a>
+                        <a href="#" class="nav-link">Gallery</a>
+                        <a href="#" class="nav-link">Events</a>
+                        <a href="#" class="nav-link">Coffee Shop</a>
+                    </nav>
+
+                    <!-- Shopping Cart -->
+                    <div class="header-actions">
+                        <button class="cart-btn" aria-label="Shopping Cart">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"/>
+                                <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"/>
+                                <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"/>
+                            </svg>
+                        </button>
+                        
+                        <!-- Mobile menu button -->
+                        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">
+                            <svg class="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="4" x2="20" y1="6" y2="6"/>
+                                <line x1="4" x2="20" y1="12" y2="12"/>
+                                <line x1="4" x2="20" y1="18" y2="18"/>
+                            </svg>
+                            <svg class="close-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                                <path d="m18 6-12 12"/>
+                                <path d="m6 6 12 12"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav" id="mobileNav">
+                <div class="mobile-nav-content">
+                    <a href="#" class="mobile-nav-link">About</a>
+                    <a href="#" class="mobile-nav-link">Gallery</a>
+                    <a href="#" class="mobile-nav-link">Events</a>
+                    <a href="#" class="mobile-nav-link">Coffee Shop</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero / Feature Exhibition -->
+    <section class="hero">
+        <img src="https://images.unsplash.com/photo-1723974591057-ccadada1f283?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb250ZW1wb3JhcnklMjBhcnQlMjBnYWxsZXJ5JTIwZXhoaWJpdGlvbnxlbnwxfHx8fDE3NTgzNDIwMjZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Feature Exhibition - Contemporary Expressions" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="hero-subtitle">Now Showing</p>
+                <h1 class="hero-title">
+                    Contemporary<br>Expressions
+                </h1>
+                <p class="hero-description">
+                    Emerging artists redefining the city's voice.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#" class="gallery-btn-rounded">Buy Tickets</a>
+                    <a href="#" class="gallery-btn-rounded">Plan Your Visit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Exhibitions -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Current Exhibitions</h2>
+            
+            <div class="exhibitions-grid">
+                <!-- Exhibition 1 -->
+                <article class="exhibition-card">
+                    <div class="exhibition-image">
+                        <img src="https://images.unsplash.com/photo-1536241455566-5709c3aefd3d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHBhaW50aW5nJTIwYXJ0fGVufDF8fHx8MTc1ODMzMjc0N3ww&ixlib=rb-4.1.0&q=80&w=1080" alt="Chromatic Drift">
+                        <div class="exhibition-overlay"></div>
+                    </div>
+                    <h3 class="exhibition-title">Chromatic Drift</h3>
+                    <p class="exhibition-info">Aug 15 – Oct 27 • Texture + light studies</p>
+                    <div class="exhibition-buttons">
+                        <a href="#" class="gallery-btn-primary">View Exhibition</a>
+                        <a href="#" class="gallery-btn-outline">Buy Tickets</a>
+                    </div>
+                </article>
+
+                <!-- Exhibition 2 -->
+                <article class="exhibition-card">
+                    <div class="exhibition-image">
+                        <img src="https://images.unsplash.com/photo-1748787007524-d4bc8c7621da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnQlMjBnYWxsZXJ5JTIwaW50ZXJpb3IlMjB3aGl0ZSUyMHdhbGxzfGVufDF8fHx8MTc1ODM0MjAyN3ww&ixlib=rb-4.1.0&q=80&w=1080" alt="Urban Mythologies">
+                        <div class="exhibition-overlay"></div>
+                    </div>
+                    <h3 class="exhibition-title">Urban Mythologies</h3>
+                    <p class="exhibition-info">Aug 20 – Nov 10 • City folklore reimagined</p>
+                    <div class="exhibition-buttons">
+                        <a href="#" class="gallery-btn-primary">View Exhibition</a>
+                        <a href="#" class="gallery-btn-outline">Buy Tickets</a>
+                    </div>
+                </article>
+
+                <!-- Exhibition 3 -->
+                <article class="exhibition-card">
+                    <div class="exhibition-image">
+                        <img src="https://images.unsplash.com/photo-1741036378920-8585546a19b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaXhlZCUyMG1lZGlhJTIwYXJ0d29yayUyMHRleHR1cmV8ZW58MXx8fHwxNzU4MjgxMjE5fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Signal Noise">
+                        <div class="exhibition-overlay"></div>
+                    </div>
+                    <h3 class="exhibition-title">Signal Noise</h3>
+                    <p class="exhibition-info">Sep 1 – Nov 20 • Data + distortion</p>
+                    <div class="exhibition-buttons">
+                        <a href="#" class="gallery-btn-primary">View Exhibition</a>
+                        <a href="#" class="gallery-btn-outline">Buy Tickets</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming -->
+    <section class="section section-border">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title-sm">Upcoming</h2>
+                    <p class="section-subtitle">Get early access to our next exhibitions.</p>
+                </div>
+                <a href="#" class="view-all-link">View All Events</a>
+            </div>
+            
+            <div class="upcoming-grid">
+                <!-- Featured Exhibition -->
+                <article class="upcoming-card upcoming-featured">
+                    <div class="upcoming-image">
+                        <img src="https://images.unsplash.com/photo-1543910556-bb42a926e975?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0JTIwbWFjaGluZSUyMGFydCUyMGluc3RhbGxhdGlvbnxlbnwxfHx8fDE3NTgzNDI0NDB8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Soft Machines">
+                        <div class="upcoming-overlay"></div>
+                        <div class="coming-soon-badge">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                                <line x1="16" x2="16" y1="2" y2="6"/>
+                                <line x1="8" x2="8" y1="2" y2="6"/>
+                                <line x1="3" x2="21" y1="10" y2="10"/>
+                            </svg>
+                            Coming Soon
+                        </div>
+                    </div>
+                    <div class="upcoming-content">
+                        <p class="upcoming-date">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                                <line x1="16" x2="16" y1="2" y2="6"/>
+                                <line x1="8" x2="8" y1="2" y2="6"/>
+                                <line x1="3" x2="21" y1="10" y2="10"/>
+                            </svg>
+                            Opens Oct 30
+                        </p>
+                        <h3 class="upcoming-title upcoming-title-large">Soft Machines</h3>
+                        <p class="upcoming-description upcoming-description-large">Exploring the intersection of technology and organic forms</p>
+                        <p class="upcoming-artist">Featuring Maya Chen & Collective</p>
+                        <div class="upcoming-actions">
+                            <button class="gallery-btn-outline upcoming-btn">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+                                    <path d="m13.73 21a2 2 0 0 1-3.46 0"/>
+                                </svg>
+                                Notify Me
+                            </button>
+                            <button class="learn-more-btn">Learn More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Upcoming Exhibition 2 -->
+                <article class="upcoming-card">
+                    <div class="upcoming-image upcoming-image-sm">
+                        <img src="https://images.unsplash.com/photo-1709934645823-97208b21ed30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibHVlJTIwaG91ciUyMGFydCUyMGV4aGliaXRpb258ZW58MXx8fHwxNzU4MzQyNDQwfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Blue Hour">
+                        <div class="upcoming-overlay"></div>
+                        <div class="coming-soon-badge">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                                <line x1="16" x2="16" y1="2" y2="6"/>
+                                <line x1="8" x2="8" y1="2" y2="6"/>
+                                <line x1="3" x2="21" y1="10" y2="10"/>
+                            </svg>
+                            Coming Soon
+                        </div>
+                    </div>
+                    <div class="upcoming-content">
+                        <p class="upcoming-date">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                                <line x1="16" x2="16" y1="2" y2="6"/>
+                                <line x1="8" x2="8" y1="2" y2="6"/>
+                                <line x1="3" x2="21" y1="10" y2="10"/>
+                            </svg>
+                            Opens Nov 15
+                        </p>
+                        <h3 class="upcoming-title">Blue Hour</h3>
+                        <p class="upcoming-description">Twilight meditations in mixed media</p>
+                        <p class="upcoming-artist">Featuring Elena Rodriguez</p>
+                        <div class="upcoming-actions">
+                            <button class="gallery-btn-outline upcoming-btn">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+                                    <path d="m13.73 21a2 2 0 0 1-3.46 0"/>
+                                </svg>
+                                Notify Me
+                            </button>
+                            <button class="learn-more-btn">Learn More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Upcoming Exhibition 3 -->
+                <article class="upcoming-card">
+                    <div class="upcoming-image upcoming-image-sm">
+                        <img src="https://images.pexels.com/photos/6615070/pexels-photo-6615070.jpeg" alt="Paper Cities">
+                        <div class="upcoming-overlay"></div>
+                        <div class="coming-soon-badge">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                                <line x1="16" x2="16" y1="2" y2="6"/>
+                                <line x1="8" x2="8" y1="2" y2="6"/>
+                                <line x1="3" x2="21" y1="10" y2="10"/>
+                            </svg>
+                            Coming Soon
+                        </div>
+                    </div>
+                    <div class="upcoming-content">
+                        <p class="upcoming-date">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                                <line x1="16" x2="16" y1="2" y2="6"/>
+                                <line x1="8" x2="8" y1="2" y2="6"/>
+                                <line x1="3" x2="21" y1="10" y2="10"/>
+                            </svg>
+                            Opens Dec 5
+                        </p>
+                        <h3 class="upcoming-title">Paper Cities</h3>
+                        <p class="upcoming-description">Urban landscapes reimagined through paper sculpture</p>
+                        <p class="upcoming-artist">Featuring David Kim</p>
+                        <div class="upcoming-actions">
+                            <button class="gallery-btn-outline upcoming-btn">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+                                    <path d="m13.73 21a2 2 0 0 1-3.46 0"/>
+                                </svg>
+                                Notify Me
+                            </button>
+                            <button class="learn-more-btn">Learn More</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Exhibitions -->
+    <section class="section section-border">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title-sm">Past Exhibitions</h2>
+                <a href="#" class="view-all-link">View Archive</a>
+            </div>
+            
+            <div class="archive-grid">
+                <div class="archive-item">
+                    <img src="https://images.unsplash.com/photo-1580130544401-347c796dceec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnQlMjBleGhpYml0aW9uJTIwdmludGFnZSUyMHBvc3RlcnxlbnwxfHx8fDE3NTgzNDIyODR8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Retro Visions">
+                    <div class="archive-overlay"></div>
+                    <div class="archive-content">
+                        <h4 class="archive-title">Retro Visions</h4>
+                        <p class="archive-year">2024</p>
+                    </div>
+                </div>
+
+                <div class="archive-item">
+                    <img src="https://images.unsplash.com/photo-1700241547646-51d1ebb966bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGFydCUyMGV4aGliaXRpb24lMjBhcmNoaXZlfGVufDF8fHx8MTc1ODM0MjI4NHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Digital Forms">
+                    <div class="archive-overlay"></div>
+                    <div class="archive-content">
+                        <h4 class="archive-title">Digital Forms</h4>
+                        <p class="archive-year">2024</p>
+                    </div>
+                </div>
+
+                <div class="archive-item">
+                    <img src="https://images.unsplash.com/photo-1750326562849-5bd94ed444e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb250ZW1wb3JhcnklMjBhcnQlMjBtdXNldW0lMjBhcmNoaXZlfGVufDF8fHx8MTc1ODM0MjI4NHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Modern Space">
+                    <div class="archive-overlay"></div>
+                    <div class="archive-content">
+                        <h4 class="archive-title">Modern Space</h4>
+                        <p class="archive-year">2024</p>
+                    </div>
+                </div>
+
+                <div class="archive-item">
+                    <img src="https://images.unsplash.com/photo-1742497359858-8e0a442c9c55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYWxsZXJ5JTIwZXhoaWJpdGlvbiUyMGhpc3Rvcnl8ZW58MXx8fHwxNzU4MzQyMjg1fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Light Studies">
+                    <div class="archive-overlay"></div>
+                    <div class="archive-content">
+                        <h4 class="archive-title">Light Studies</h4>
+                        <p class="archive-year">2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artists -->
+    <section class="section section-border">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title-sm">Artists</h2>
+                    <p class="section-subtitle">Meet the artists shaping the new era.</p>
+                </div>
+                <a href="#" class="view-all-link view-all-light">View All</a>
+            </div>
+
+            <div class="artists-grid">
+                <!-- Artist 1 -->
+                <article class="artist-card">
+                    <div class="artist-image">
+                        <img src="https://images.pexels.com/photos/3778328/pexels-photo-3778328.jpeg" alt="Artist Maria Santos">
+                    </div>
+                    <h3 class="artist-name">Maria Santos</h3>
+                    <p class="artist-info">Brooklyn • Sculpture</p>
+                    <a href="#" class="gallery-btn-white artist-btn">See Works</a>
+                </article>
+
+                <!-- Artist 2 -->
+                <article class="artist-card">
+                    <div class="artist-image">
+                        <img src="https://images.unsplash.com/photo-1536243696867-c8cec3c7d5d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlJTIwYXJ0aXN0JTIwcG9ydHJhaXQlMjB3b3Jrc2hvcHxlbnwxfHx8fDE3NTgzNDIyODh8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Artist Leo Park">
+                    </div>
+                    <h3 class="artist-name">Leo Park</h3>
+                    <p class="artist-info">Harlem • Mixed Media</p>
+                    <a href="#" class="gallery-btn-white artist-btn">See Works</a>
+                </article>
+
+                <!-- Artist 3 -->
+                <article class="artist-card">
+                    <div class="artist-image">
+                        <img src="https://images.pexels.com/photos/4442024/pexels-photo-4442024.jpeg" alt="Artist Aya Nakamura">
+                    </div>
+                    <h3 class="artist-name">Aya Nakamura</h3>
+                    <p class="artist-info">SoHo • Painting</p>
+                    <a href="#" class="gallery-btn-white artist-btn">See Works</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit CTA -->
+    <section class="visit-cta">
+        <img src="https://images.pexels.com/photos/2372982/pexels-photo-2372982.jpeg" alt="Gallery Interior in SoHo" class="visit-bg">
+        <div class="visit-overlay"></div>
+        <div class="container visit-content">
+            <h2 class="visit-title">Experience the Gallery in SoHo</h2>
+            <p class="visit-description">Find hours, directions, and accessibility information.</p>
+            <a href="#" class="gallery-btn-rounded">Hours & Directions</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Hours -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Hours</h3>
+                    <div class="footer-hours">
+                        <div class="hours-row">
+                            <span>MON - WED</span>
+                            <span>10AM - 7PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>THU - FRI</span>
+                            <span>10AM - 9PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>SAT - SUN</span>
+                            <span>9AM - 8PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Location</h3>
+                    <div class="location-info">
+                        <div class="location-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d19100" stroke-width="2">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <div>
+                                <p>123 Spring Street</p>
+                                <p>SoHo, New York, NY 10012</p>
+                                <p>United States</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d19100" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <a href="tel:+12125550123" class="contact-link">(212) 555-0123</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d19100" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <a href="mailto:info@neweraart.nyc" class="contact-link">info@neweraart.nyc</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                                <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 New Era Art Gallery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuIcon = document.querySelector('.menu-icon');
+            const closeIcon = document.querySelector('.close-icon');
+            
+            mobileNav.classList.toggle('active');
+            
+            if (mobileNav.classList.contains('active')) {
+                menuIcon.style.display = 'none';
+                closeIcon.style.display = 'block';
+            } else {
+                menuIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
