@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Era Art Gallery</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a class="logo" href="index.html"></a>
+                    <img src="../new-era-gallery/new_era_logo.png" alt="New Era Art Gallery Logo" class="logo-img">
+                </div>
+
+                <!-- Right side container for navigation and icons -->
+                <div class="header-right">
+                    <!-- Desktop Navigation -->
+                    <nav class="desktop-nav">
+                        <a href="../new-era-gallery/about/about.html" class="nav-link">ABOUT</a>
+                        <a href="../new-era-gallery/gallery/gallery.html" class="nav-link">GALLERY</a>
+                        <a href="../new-era-gallery/events/events.html" class="nav-link">EVENTS</a>
+                        <a href="../new-era-gallery/coffee-shop/coffee-shop.html" class="nav-link">COFFEE SHOP</a>
+                    </nav>
+
+                    <!-- Utility Icons -->
+                    <div class="utility-icons">
+                        <button class="icon-btn" aria-label="Shopping Cart">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="8" cy="21" r="1"/>
+                                <circle cx="19" cy="21" r="1"/>
+                                <path d="m2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                            </svg>
+                        </button>
+                        
+                        <!-- Mobile Menu Button -->
+                        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+                            <svg id="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="4" x2="20" y1="6" y2="6"/>
+                                <line x1="4" x2="20" y1="12" y2="12"/>
+                                <line x1="4" x2="20" y1="18" y2="18"/>
+                            </svg>
+                            <svg id="close-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                                <path d="M18 6 6 18"/>
+                                <path d="m6 6 12 12"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav" id="mobile-nav">
+                <div class="mobile-nav-content">
+                    <a href="../new-era-gallery/about/about.html" class="mobile-nav-link" onclick="closeMobileMenu()">ABOUT</a>
+                    <a href="../new-era-gallery/gallery/gallery.html" class="mobile-nav-link" onclick="closeMobileMenu()">GALLERY</a>
+                    <a href="../new-era-gallery/events/events.html" class="mobile-nav-link" onclick="closeMobileMenu()">EVENTS</a>
+                    <a href="../new-era-gallery/coffee-shop/coffee-shop.html" class="mobile-nav-link" onclick="closeMobileMenu()">COFFEE SHOP</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <!-- Background Image -->
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1723974591057-ccadada1f283?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb250ZW1wb3JhcnklMjBhcnQlMjBnYWxsZXJ5JTIwZXhoaWJpdGlvbnxlbnwxfHx8fDE3NTY2MDA5NjF8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Current Exhibition" class="hero-img">
+            <!-- Dark Overlay -->
+            <div class="hero-overlay"></div>
+        </div>
+
+        <!-- Content Overlay -->
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    CONTEMPORARY<br>
+                    EXPRESSIONS
+                </h1>
+                <p class="hero-subtitle">
+                    FEATURING EMERGING ARTISTS FROM NYC
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">BUY TICKETS</button>
+                    <button class="btn btn-primary">PLAN YOUR VISIT</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's On Today -->
+    <section class="whats-on-section">
+        <div class="container">
+            <h2 class="section-title">WHAT'S ON TODAY</h2>
+            
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1533158388470-9a56699990c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGFydCUyMHBhaW50aW5nfGVufDF8fHx8MTc1NjU2NjA3OHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Current Exhibit">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">CURRENT EXHIBIT</h3>
+                        <p class="card-subtitle">Contemporary Expressions</p>
+                        <button class="btn btn-secondary">VIEW WORKS</button>
+                    </div>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnQlMjBnYWxsZXJ5JTIwdmlzaXRvcnxlbnwxfHx8fDE3NTY2MDA5NjF8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Upcoming Event">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">UPCOMING EVENT</h3>
+                        <p class="card-subtitle">Artist Talk: Modern Perspectives</p>
+                        <button class="btn btn-secondary">REGISTER</button>
+                    </div>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="card-image">
+                        <img src="https://images.pexels.com/photos/907142/pexels-photo-907142.jpeg" alt="Coffee Shop Special">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">COFFEE SHOP SPECIAL</h3>
+                        <p class="card-subtitle">Artisan Roast & Pastries</p>
+                        <button class="btn btn-secondary">ORDER NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Highlights -->
+    <section class="featured-section">
+        <div class="container">
+            <!-- Artist of the Month -->
+            <div class="artist-section">
+                <div class="artist-image">
+                    <img src="https://images.pexels.com/photos/3778328/pexels-photo-3778328.jpeg" alt="Artist of the Month - Modern Abstract Sculpture in Gallery">
+                </div>
+                <div class="artist-content">
+                    <h2 class="artist-title">
+                        ARTIST OF<br>
+                        THE MONTH
+                    </h2>
+                    <div class="artist-details">
+                        <h3 class="artist-name">MARIA SANTOS</h3>
+                        <p class="artist-description">
+                            Maria Santos explores the intersection of technology and human emotion through her bold sculptural works. 
+                            Her latest series "Digital Dreams" challenges our perception of reality in the modern age.
+                        </p>
+                        <p class="artist-description">
+                            Based in Brooklyn, Santos has exhibited internationally and her work is part of several permanent collections.
+                        </p>
+                    </div>
+                    <button class="btn btn-white">SEE WORKS</button>
+                </div>
+            </div>
+
+            <!-- From the Shop & Café Vibes -->
+            <div class="shop-cafe-section">
+                <!-- From the Shop -->
+                <div class="shop-section">
+                    <h2 class="subsection-title">FROM THE SHOP</h2>
+                    <div class="shop-image">
+                        <img src="https://images.unsplash.com/photo-1533158388470-9a56699990c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGFydCUyMHBhaW50aW5nfGVufDF8fHx8MTc1NjU2NjA3OHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Limited Edition Print">
+                        <div class="shop-overlay"></div>
+                    </div>
+                    <div class="shop-content">
+                        <h3 class="shop-title">LIMITED EDITION PRINTS</h3>
+                        <p class="shop-description">
+                            Exclusive prints from our featured artists, available in limited quantities. 
+                            Each piece comes with a certificate of authenticity.
+                        </p>
+                        <button class="btn btn-secondary">SHOP NOW</button>
+                    </div>
+                </div>
+
+                <!-- Café Vibes -->
+                <div class="cafe-section">
+                    <h2 class="subsection-title">CAFÉ VIBES</h2>
+                    <div class="cafe-image">
+                        <img src="https://images.pexels.com/photos/32416015/pexels-photo-32416015.jpeg" alt="Café Interior">
+                        <div class="cafe-overlay"></div>
+                    </div>
+                    <div class="cafe-content">
+                        <h3 class="cafe-title">CREATIVE CO-WORKING</h3>
+                        <p class="cafe-description">
+                            Our café offers the perfect blend of artisan coffee and creative atmosphere. 
+                            Free WiFi, comfortable seating, and inspiring art make it ideal for remote work.
+                        </p>
+                        <button class="btn btn-secondary">VIEW MENU</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="cta-banner">
+        <!-- Background Image -->
+        <div class="cta-bg">
+            <img src="https://images.unsplash.com/photo-1639999472003-dc2320ce5708?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZXclMjB5b3JrJTIwY2l0eSUyMHNvaG8lMjBzdHJlZXQlMjBhcnQlMjBnYWxsZXJ5fGVufDF8fHx8MTc1NjYwMjI0OXww&ixlib=rb-4.1.0&q=80&w=1080" alt="New York SoHo Street Scene">
+            <!-- Dark Overlay -->
+            <div class="cta-overlay"></div>
+        </div>
+        
+        <div class="cta-content">
+            <h2 class="cta-title">
+                EXPERIENCE ART.<br>
+                STAY FOR<br>
+                COMMUNITY.
+            </h2>
+            
+            <button class="btn btn-primary btn-large">BUY TICKETS</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Hours of Operation -->
+                <div class="footer-section">
+                    <h3 class="footer-title">HOURS</h3>
+                    <div class="hours-list">
+                        <div class="hours-item">
+                            <span>MON - WED</span>
+                            <span>10AM - 7PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>THU - FRI</span>
+                            <span>10AM - 9PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>SAT - SUN</span>
+                            <span>9AM - 8PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="footer-section">
+                    <h3 class="footer-title">LOCATION</h3>
+                    <div class="location-info">
+                        <div class="location-item">
+                            <svg class="location-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 10c0 6-10 12-10 12s-10-6-10-12a10 10 0 0 1 20 0Z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <div class="location-text">
+                                <p class="address-primary">123 Spring Street</p>
+                                <p class="address-secondary">SoHo, New York, NY 10012</p>
+                                <p class="address-country">United States</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3 class="footer-title">CONTACT</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg class="contact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <span>(212) 555-0123</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg class="contact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span>info@neweraart.nyc</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="footer-section">
+                    <h3 class="footer-title">FOLLOW US</h3>
+                    <div class="social-links">
+                        <button class="social-btn" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                                <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                            </svg>
+                        </button>
+                        <button class="social-btn" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </button>
+                        <button class="social-btn" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 New Era Art Gallery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let isMobileMenuOpen = false;
+
+        function toggleMobileMenu() {
+            isMobileMenuOpen = !isMobileMenuOpen;
+            const mobileNav = document.getElementById('mobile-nav');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            
+            if (isMobileMenuOpen) {
+                mobileNav.classList.add('open');
+                menuIcon.style.display = 'none';
+                closeIcon.style.display = 'block';
+            } else {
+                mobileNav.classList.remove('open');
+                menuIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            }
+        }
+
+        function closeMobileMenu() {
+            isMobileMenuOpen = false;
+            const mobileNav = document.getElementById('mobile-nav');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            
+            mobileNav.classList.remove('open');
+            menuIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const header = document.querySelector('.header');
+            if (!header.contains(event.target) && isMobileMenuOpen) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close mobile menu on window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768 && isMobileMenuOpen) {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</body>
+</html>

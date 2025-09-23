@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Rentals - New Era Art Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+               <div class="logo">
+                    <a href="../index.html" aria-label="Home">
+                        <img src="../new_era_logo.png" alt="New Era Art Gallery" class="logo-img">
+                    </a>
+                    </div>
+
+                <div class="nav-wrapper">
+                    <nav class="nav-desktop">
+                        <a href="../about/about.html" class="nav-link">ABOUT</a>
+                        <a href="../gallery/gallery.html" class="nav-link">GALLERY</a>
+                        <a href="../events/events.html" class="nav-link active">EVENTS</a>
+                        <a href="../coffee-shop/coffee-shop.html" class="nav-link">COFFEE SHOP</a>
+                    </nav>
+                    
+                    <!-- Shopping Cart -->
+                    <div class="header-actions">
+                        <button class="cart-btn" aria-label="Shopping Cart">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"/>
+                                <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"/>
+                                <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"/>
+                            </svg>
+                        </button>
+                        
+                        <button class="mobile-menu-btn" aria-label="Menu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                <line x1="3" y1="12" x2="21" y2="12"></line>
+                                <line x1="3" y1="18" x2="21" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="nav-mobile">
+                <a href="../about/about.html" class="nav-link">ABOUT</a>
+                <a href="../gallery/gallery.html" class="nav-link">GALLERY</a>
+                <a href="../events/events.html" class="nav-link active">EVENTS</a>
+                <a href="../coffee-shop/" class="nav-link">COFFEE SHOP</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="https://images.pexels.com/photos/16037756/pexels-photo-16037756.jpeg?_gl=1*oltxq4*_ga*MTk3Njg4NDI5NC4xNzQwNjE1Nzcz*_ga_8JE65Q40S6*czE3NTg0OTU1MzYkbzQ4JGcxJHQxNzU4NDk1NTc2JGoyMCRsMCRoMA.." alt="Modern art gallery with white walls and contemporary artwork" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <p class="hero-subtitle">Plan Your Visit</p>
+                    <h1 class="hero-title">Tickets & Programs</h1>
+                    <p class="hero-description">
+                        Buy tickets for current exhibitions and register for artist talks, workshops, and special programs.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#tickets" class="btn btn-primary btn-rounded">Buy Tickets</a>
+                        <a href="rentals.html" class="btn btn-primary btn-rounded">Host an Event</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy Tickets Section -->
+    <section id="tickets" class="tickets-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Buy Tickets</h2>
+                <div class="section-meta">Today • This Week</div>
+            </div>
+
+            <div class="tickets-grid">
+                <article class="ticket-card">
+                    <div class="ticket-image">
+                        <img src="https://images.unsplash.com/photo-1723974591057-ccadada1f283?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcnQlMjBleGhpYml0aW9uJTIwbXVzZXVtfGVufDF8fHx8MTc1ODM0MjU5OHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Modern art exhibition">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <h3 class="ticket-title">Exhibits</h3>
+                    <p class="ticket-description">General admission to current shows and installations.</p>
+                    <a href="#calendar" class="btn btn-white btn-small">Buy Tickets</a>
+                </article>
+
+                <article class="ticket-card">
+                    <div class="ticket-image">
+                        <img src="https://images.unsplash.com/photo-1598476793884-0e7afd57b92e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpc3QlMjB3b3Jrc2hvcCUyMGNyZWF0aXZlJTIwdGFsa3xlbnwxfHx8fDE3NTgzNDI1OTh8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Artist workshop">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <h3 class="ticket-title">Programs</h3>
+                    <p class="ticket-description">Talks, workshops, panels, and live performance sets.</p>
+                    <a href="#calendar" class="btn btn-white btn-small">Register</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section id="calendar" class="calendar-section">
+        <div class="container">
+            <div class="calendar-header">
+                <h2 class="section-title">Calendar</h2>
+                <div class="calendar-nav">
+                    <button class="calendar-nav-btn" id="prevMonth" aria-label="Previous month">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15,18 9,12 15,6"></polyline>
+                        </svg>
+                    </button>
+                    <span class="calendar-month" id="currentMonth">October 2024</span>
+                    <button class="calendar-nav-btn" id="nextMonth" aria-label="Next month">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9,18 15,12 9,6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="calendar-grid" id="calendarGrid">
+                <!-- Calendar will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <img src="https://images.unsplash.com/photo-1740416307504-11b1565d53df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcnQlMjBpbnN0YWxsYXRpb24lMjBnYWxsZXJ5JTIwc3BhY2V8ZW58MXx8fHwxNzU4NDk0NTE4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Modern art installation" class="banner-bg">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <div class="container">
+                <h2 class="banner-title">Experience Art in SoHo</h2>
+                <p class="banner-description">
+                    Transform your next event with the sophistication of New Era Gallery. Our SoHo space offers the perfect backdrop for launches, private views, corporate gatherings, and celebrations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rentals Section -->
+    <section id="rentals" class="rentals-section">
+        <div class="container">
+            <h2 class="section-title">Event Space Rentals</h2>
+            <p class="section-description">
+                Host your launch, panel, private view, or celebration in our contemporary SoHo gallery space.
+            </p>
+
+            <!-- Rental Spaces -->
+            <div class="rental-spaces">
+                <article class="space-card">
+                    <div class="space-image">
+                        <img src="https://images.unsplash.com/photo-1756889661455-38e4afd84815?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYWxsZXJ5JTIwd2hpdGUlMjB3YWxscyUyMG1vZGVybiUyMHNjdWxwdHVyZXxlbnwxfHx8fDE3NTg0OTQ1MTh8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Gallery space">
+                        <div class="image-overlay"></div>
+                        <div class="price-badge">From $2,000</div>
+                    </div>
+                    <div class="space-content">
+                        <div class="space-header">
+                            <h3 class="space-title">Gallery</h3>
+                            <span class="space-capacity">~120 guests</span>
+                        </div>
+                        <p class="space-description">Our main exhibition space with soaring ceilings and natural light.</p>
+                        <ul class="space-features">
+                            <li>White walls & track lighting</li>
+                            <li>Open floor plan</li>
+                            <li>Climate controlled</li>
+                            <li>Professional art handling</li>
+                        </ul>
+                        <button class="btn btn-white btn-full">View Details</button>
+                    </div>
+                </article>
+
+                <article class="space-card">
+                    <div class="space-image">
+                        <img src="https://images.pexels.com/photos/32416015/pexels-photo-32416015.jpeg?_gl=1*1nuo903*_ga*MTk3Njg4NDI5NC4xNzQwNjE1Nzcz*_ga_8JE65Q40S6*czE3NTg1MDE3MzAkbzQ5JGcxJHQxNzU4NTA4NDUzJGo1OSRsMCRoMA.." alt="Café-Bar space">
+                        <div class="image-overlay"></div>
+                        <div class="price-badge">From $1,500</div>
+                    </div>
+                    <div class="space-content">
+                        <div class="space-header">
+                            <h3 class="space-title">Café-Bar</h3>
+                            <span class="space-capacity">~60 guests</span>
+                        </div>
+                        <p class="space-description">Intimate lounge space perfect for receptions and networking events.</p>
+                        <ul class="space-features">
+                            <li>Full bar service</li>
+                            <li>DJ booth & sound system</li>
+                            <li>Lounge seating</li>
+                            <li>Ambient lighting</li>
+                        </ul>
+                        <button class="btn btn-white btn-full">View Details</button>
+                    </div>
+                </article>
+
+                <article class="space-card">
+                    <div class="space-image">
+                        <img src="https://images.pexels.com/photos/2372978/pexels-photo-2372978.jpeg?_gl=1*jml2bi*_ga*MTk3Njg4NDI5NC4xNzQwNjE1Nzcz*_ga_8JE65Q40S6*czE3NTg0OTU1MzYkbzQ4JGcxJHQxNzU4NDk1OTg0JGo1OSRsMCRoMA.." alt="Whole venue">
+                        <div class="image-overlay"></div>
+                        <div class="price-badge">From $3,200</div>
+                    </div>
+                    <div class="space-content">
+                        <div class="space-header">
+                            <h3 class="space-title">Whole Venue</h3>
+                            <span class="space-capacity">~180 guests</span>
+                        </div>
+                        <p class="space-description">Complete gallery buyout for maximum impact and flexibility.</p>
+                        <ul class="space-features">
+                            <li>Exclusive access</li>
+                            <li>All spaces included</li>
+                            <li>Custom configurations</li>
+                            <li>Dedicated event coordinator</li>
+                        </ul>
+                        <button class="btn btn-white btn-full">View Details</button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Rates Table -->
+            <div class="rates-section">
+                <h3 class="rates-title">Rates & Packages</h3>
+                
+                <!-- Mobile Cards -->
+                <div class="rates-mobile">
+                    <div class="rate-card">
+                        <div class="rate-header">
+                            <h4>Gallery</h4>
+                        </div>
+                        <div class="rate-pricing">
+                            <div class="rate-price">
+                                <span class="rate-label">Half Day</span>
+                                <span class="rate-amount">$2,000</span>
+                            </div>
+                            <div class="rate-price">
+                                <span class="rate-label">Full Day</span>
+                                <span class="rate-amount">$3,500</span>
+                            </div>
+                        </div>
+                        <div class="rate-addons">
+                            <span class="addon-label">Add-Ons Available</span>
+                            <ul class="addon-list">
+                                <li>AV Package</li>
+                                <li>Event Staffing</li>
+                                <li>Bar Service</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="rate-card popular">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="rate-header">
+                            <h4>Café-Bar</h4>
+                        </div>
+                        <div class="rate-pricing">
+                            <div class="rate-price">
+                                <span class="rate-label">Half Day</span>
+                                <span class="rate-amount">$1,500</span>
+                            </div>
+                            <div class="rate-price">
+                                <span class="rate-label">Full Day</span>
+                                <span class="rate-amount">$2,800</span>
+                            </div>
+                        </div>
+                        <div class="rate-addons">
+                            <span class="addon-label">Add-Ons Available</span>
+                            <ul class="addon-list">
+                                <li>DJ Setup</li>
+                                <li>Custom Lighting</li>
+                                <li>Bar Service</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="rate-card">
+                        <div class="rate-header">
+                            <h4>Whole Venue</h4>
+                        </div>
+                        <div class="rate-pricing">
+                            <div class="rate-price">
+                                <span class="rate-label">Half Day</span>
+                                <span class="rate-amount">$3,200</span>
+                            </div>
+                            <div class="rate-price">
+                                <span class="rate-label">Full Day</span>
+                                <span class="rate-amount">$5,800</span>
+                            </div>
+                        </div>
+                        <div class="rate-addons">
+                            <span class="addon-label">Add-Ons Available</span>
+                            <ul class="addon-list">
+                                <li>All Add-ons Included</li>
+                                <li>Event Coordinator</li>
+                                <li>Custom Setup</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Table -->
+                <div class="rates-desktop">
+                    <table class="rates-table">
+                        <thead>
+                            <tr>
+                                <th>Space</th>
+                                <th>Half Day</th>
+                                <th>Full Day</th>
+                                <th>Available Add-Ons</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Gallery</td>
+                                <td>$2,000</td>
+                                <td>$3,500</td>
+                                <td>AV Package • Event Staffing • Bar Service</td>
+                            </tr>
+                            <tr class="popular-row">
+                                <td>
+                                    Café-Bar
+                                    <span class="popular-badge-table">Popular</span>
+                                </td>
+                                <td>$1,500</td>
+                                <td>$2,800</td>
+                                <td>DJ Setup • Custom Lighting • Bar Service</td>
+                            </tr>
+                            <tr>
+                                <td>Whole Venue</td>
+                                <td>$3,200</td>
+                                <td>$5,800</td>
+                                <td>All Add-ons Included • Event Coordinator</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="faq-section">
+                <h3 class="faq-title">FAQ</h3>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">Catering & Bar</button>
+                        <div class="faq-answer">
+                            We have preferred vendors for catering and bar service. Outside catering is permitted with prior approval and may incur additional fees.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">AV & Tech</button>
+                        <div class="faq-answer">
+                            Professional AV packages available including projector, microphones, DJ booth, and gallery lighting systems. Technical support included.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Setup & Load-in</button>
+                        <div class="faq-answer">
+                            Access begins 2 hours prior to event start time. Staff support is included with full-day packages. Additional setup time available for complex installations.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Hours & Noise</button>
+                        <div class="faq-answer">
+                            Events may run until 11pm with quiet-down beginning at 10:45pm. Extended hours available for special occasions with prior arrangement.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inquiry Form -->
+            <div class="inquiry-form-section">
+                <div class="inquiry-form-container">
+                    <div class="form-header">
+                        <h3 class="form-title">Book Your Event</h3>
+                        <p class="form-description">Ready to transform your vision into reality? Contact us to discuss your event needs.</p>
+                    </div>
+                    
+                    <form class="inquiry-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="space">Preferred Space</label>
+                                <select id="space" name="space">
+                                    <option value="">Select space</option>
+                                    <option value="gallery">Gallery</option>
+                                    <option value="cafe-bar">Café-Bar</option>
+                                    <option value="whole-venue">Whole Venue</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Expected Guests</label>
+                                <input type="number" id="guests" name="guests" placeholder="50">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Preferred Date</label>
+                                <input type="date" id="date" name="date">
+                            </div>
+                            <div class="form-group">
+                                <label for="duration">Duration</label>
+                                <select id="duration" name="duration">
+                                    <option value="">Select duration</option>
+                                    <option value="half-day">Half Day</option>
+                                    <option value="full-day">Full Day</option>
+                                    <option value="evening">Evening Only</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="details">Event Details</label>
+                            <textarea id="details" name="details" rows="4" placeholder="Tell us about your event..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">Request Date</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+  <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Hours -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Hours</h3>
+                    <div class="footer-hours">
+                        <div class="hours-row">
+                            <span>MON - WED</span>
+                            <span>10AM - 7PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>THU - FRI</span>
+                            <span>10AM - 9PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>SAT - SUN</span>
+                            <span>9AM - 8PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Location</h3>
+                    <div class="location-info">
+                        <div class="location-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d19100" stroke-width="2">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <div>
+                                <p>123 Spring Street</p>
+                                <p>SoHo, New York, NY 10012</p>
+                                <p>United States</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d19100" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <a href="tel:+12125550123" class="contact-link">(212) 555-0123</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d19100" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <a href="mailto:info@neweraart.nyc" class="contact-link">info@neweraart.nyc</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                                <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 New Era Art Gallery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script>
+        // Calendar functionality
+        class EventsCalendar {
+            constructor() {
+                this.currentDate = new Date();
+                this.currentMonth = this.currentDate.getMonth();
+                this.currentYear = this.currentDate.getFullYear();
+                
+                // Sample events data
+                this.events = [
+                    { date: 2, title: 'Artist Talk', type: 'program' },
+                    { date: 8, title: 'Opening Night', type: 'exhibit' },
+                    { date: 15, title: 'Workshop', type: 'program' },
+                    { date: 22, title: 'Panel Discussion', type: 'program' },
+                    { date: 29, title: 'Private View', type: 'exhibit' }
+                ];
+                
+                this.monthNames = [
+                    'January', 'February', 'March', 'April', 'May', 'June',
+                    'July', 'August', 'September', 'October', 'November', 'December'
+                ];
+                
+                this.dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+                
+                this.init();
+            }
+            
+            init() {
+                this.bindEvents();
+                this.render();
+            }
+            
+            bindEvents() {
+                document.getElementById('prevMonth').addEventListener('click', () => {
+                    this.currentMonth--;
+                    if (this.currentMonth < 0) {
+                        this.currentMonth = 11;
+                        this.currentYear--;
+                    }
+                    this.render();
+                });
+                
+                document.getElementById('nextMonth').addEventListener('click', () => {
+                    this.currentMonth++;
+                    if (this.currentMonth > 11) {
+                        this.currentMonth = 0;
+                        this.currentYear++;
+                    }
+                    this.render();
+                });
+            }
+            
+            render() {
+                this.updateMonthDisplay();
+                this.renderCalendarGrid();
+            }
+            
+            updateMonthDisplay() {
+                const monthDisplay = document.getElementById('currentMonth');
+                monthDisplay.textContent = `${this.monthNames[this.currentMonth]} ${this.currentYear}`;
+            }
+            
+            renderCalendarGrid() {
+                const calendarGrid = document.getElementById('calendarGrid');
+                calendarGrid.innerHTML = '';
+                
+                // Add day headers
+                this.dayNames.forEach(day => {
+                    const dayHeader = document.createElement('div');
+                    dayHeader.className = 'calendar-day-header';
+                    dayHeader.textContent = day;
+                    calendarGrid.appendChild(dayHeader);
+                });
+                
+                // Get first day of month and number of days
+                const firstDay = new Date(this.currentYear, this.currentMonth, 1).getDay();
+                const daysInMonth = new Date(this.currentYear, this.currentMonth + 1, 0).getDate();
+                
+                // Add empty cells for days before month starts
+                for (let i = 0; i < firstDay; i++) {
+                    const emptyDay = document.createElement('div');
+                    emptyDay.className = 'calendar-day empty';
+                    calendarGrid.appendChild(emptyDay);
+                }
+                
+                // Add days of the month
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const dayElement = document.createElement('div');
+                    dayElement.className = 'calendar-day';
+                    
+                    const dayNumber = document.createElement('div');
+                    dayNumber.className = 'calendar-day-number';
+                    dayNumber.textContent = day;
+                    dayElement.appendChild(dayNumber);
+                    
+                    // Check for events on this day
+                    const event = this.events.find(e => e.date === day);
+                    if (event) {
+                        const eventContainer = document.createElement('div');
+                        eventContainer.className = 'calendar-event';
+                        
+                        const eventBadge = document.createElement('div');
+                        eventBadge.className = `calendar-event-badge ${event.type}`;
+                        eventBadge.textContent = event.title;
+                        eventContainer.appendChild(eventBadge);
+                        
+                        const eventButton = document.createElement('button');
+                        eventButton.className = 'calendar-event-btn';
+                        eventButton.textContent = 'Get Tickets';
+                        eventButton.addEventListener('click', () => {
+                            alert(`Booking tickets for ${event.title} on ${this.monthNames[this.currentMonth]} ${day}`);
+                        });
+                        eventContainer.appendChild(eventButton);
+                        
+                        dayElement.appendChild(eventContainer);
+                    }
+                    
+                    calendarGrid.appendChild(dayElement);
+                }
+            }
+        }
+        
+        // FAQ functionality
+        function initFAQ() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all FAQ items
+                    faqItems.forEach(faqItem => {
+                        faqItem.classList.remove('active');
+                    });
+                    
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        }
+        
+        // Mobile menu functionality
+        function initMobileMenu() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileNav = document.querySelector('.nav-mobile');
+            
+            if (mobileMenuBtn && mobileNav) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileNav.classList.toggle('active');
+                });
+            }
+        }
+        
+        // Initialize all functionality when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            new EventsCalendar();
+            initFAQ();
+            initMobileMenu();
+        });
+    </script>
+</body>
+</html>
